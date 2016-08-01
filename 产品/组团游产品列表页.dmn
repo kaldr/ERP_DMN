@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn11.xsd" id="definitions" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="decision" name="组团游产品">
+    <decisionTable id="decisionTable">
+      <input id="input1" label="计调">
+        <inputExpression id="inputExpression1" typeRef="string" />
+      </input>
+      <input id="InputClause_0wm1r1h" label="线路经理">
+        <inputExpression id="LiteralExpression_17eealk" typeRef="string" />
+      </input>
+      <input id="InputClause_0kpu3g1" label="中心经理">
+        <inputExpression id="LiteralExpression_1b6u8sd" typeRef="string">        <text></text>
+</inputExpression>
+      </input>
+      <input id="InputClause_13y3cqa" label="">
+        <inputExpression id="LiteralExpression_0jgk7jd" typeRef="string" />
+      </input>
+      <input id="InputClause_1c3zelt" label="">
+        <inputExpression id="LiteralExpression_1mo5fd4" typeRef="string" />
+      </input>
+      <input id="InputClause_0tny3dg" label="">
+        <inputExpression id="LiteralExpression_1lnfi2y" typeRef="string" />
+      </input>
+      <input id="InputClause_0pxo74h" label="">
+        <inputExpression id="LiteralExpression_0adlyh2" typeRef="string" />
+      </input>
+      <input id="InputClause_06bk7ps" label="">
+        <inputExpression id="LiteralExpression_1dgyn37" typeRef="string" />
+      </input>
+      <input id="InputClause_05wktdy" label="">
+        <inputExpression id="LiteralExpression_03mn9z3" typeRef="string" />
+      </input>
+      <input id="InputClause_18h7ua9" label="">
+        <inputExpression id="LiteralExpression_0qljscw" typeRef="string" />
+      </input>
+      <input id="InputClause_1rvyx25" label="">
+        <inputExpression id="LiteralExpression_0m780ub" typeRef="string" />
+      </input>
+      <input id="InputClause_1gi7kev" label="">
+        <inputExpression id="LiteralExpression_0sj00sr" typeRef="string" />
+      </input>
+      <input id="InputClause_19r8iyv" label="">
+        <inputExpression id="LiteralExpression_1bo3q8v" typeRef="string" />
+      </input>
+      <input id="InputClause_0sxuyrk" label="">
+        <inputExpression id="LiteralExpression_19wa9ts" typeRef="string" />
+      </input>
+      <input id="InputClause_184f38t" label="">
+        <inputExpression id="LiteralExpression_1v3z2ly" typeRef="string" />
+      </input>
+      <input id="InputClause_0yiqrge" label="">
+        <inputExpression id="LiteralExpression_0jhpqsx" typeRef="string" />
+      </input>
+      <input id="InputClause_0svi09f" label="">
+        <inputExpression id="LiteralExpression_0i3izfr" typeRef="string" />
+      </input>
+      <output id="output1" label="" name="" typeRef="string" />
+    </decisionTable>
+  </decision>
+</definitions>
