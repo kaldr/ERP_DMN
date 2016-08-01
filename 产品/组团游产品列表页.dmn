@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn11.xsd" id="definitions" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
-  <decision id="decision" name="组团游产品">
+  <decision id="decision" name="组团游产品列表">
     <decisionTable id="decisionTable">
       <input id="input1" label="计调">
         <inputExpression id="inputExpression1" typeRef="string" />
@@ -9,52 +9,243 @@
         <inputExpression id="LiteralExpression_17eealk" typeRef="string" />
       </input>
       <input id="InputClause_0kpu3g1" label="中心经理">
-        <inputExpression id="LiteralExpression_1b6u8sd" typeRef="string">        <text></text>
-</inputExpression>
+        <inputExpression id="LiteralExpression_1b6u8sd" typeRef="string" />
       </input>
-      <input id="InputClause_13y3cqa" label="">
+      <input id="InputClause_13y3cqa" label="董事长">
         <inputExpression id="LiteralExpression_0jgk7jd" typeRef="string" />
       </input>
-      <input id="InputClause_1c3zelt" label="">
-        <inputExpression id="LiteralExpression_1mo5fd4" typeRef="string" />
-      </input>
-      <input id="InputClause_0tny3dg" label="">
-        <inputExpression id="LiteralExpression_1lnfi2y" typeRef="string" />
-      </input>
-      <input id="InputClause_0pxo74h" label="">
-        <inputExpression id="LiteralExpression_0adlyh2" typeRef="string" />
-      </input>
-      <input id="InputClause_06bk7ps" label="">
-        <inputExpression id="LiteralExpression_1dgyn37" typeRef="string" />
-      </input>
-      <input id="InputClause_05wktdy" label="">
-        <inputExpression id="LiteralExpression_03mn9z3" typeRef="string" />
-      </input>
-      <input id="InputClause_18h7ua9" label="">
-        <inputExpression id="LiteralExpression_0qljscw" typeRef="string" />
-      </input>
-      <input id="InputClause_1rvyx25" label="">
-        <inputExpression id="LiteralExpression_0m780ub" typeRef="string" />
-      </input>
-      <input id="InputClause_1gi7kev" label="">
-        <inputExpression id="LiteralExpression_0sj00sr" typeRef="string" />
-      </input>
-      <input id="InputClause_19r8iyv" label="">
-        <inputExpression id="LiteralExpression_1bo3q8v" typeRef="string" />
-      </input>
-      <input id="InputClause_0sxuyrk" label="">
-        <inputExpression id="LiteralExpression_19wa9ts" typeRef="string" />
-      </input>
-      <input id="InputClause_184f38t" label="">
-        <inputExpression id="LiteralExpression_1v3z2ly" typeRef="string" />
-      </input>
-      <input id="InputClause_0yiqrge" label="">
-        <inputExpression id="LiteralExpression_0jhpqsx" typeRef="string" />
-      </input>
-      <input id="InputClause_0svi09f" label="">
+      <input id="InputClause_0svi09f" label="线路归属人">
         <inputExpression id="LiteralExpression_0i3izfr" typeRef="string" />
       </input>
-      <output id="output1" label="" name="" typeRef="string" />
+      <output id="output1" label="添加按钮" name="" typeRef="string" />
+      <output id="OutputClause_1shsqgs" label="筛选计调" typeRef="string" />
+      <output id="OutputClause_093ak2g" label="筛选部门" typeRef="string" />
+      <output id="OutputClause_1jna86m" label="筛选站点" typeRef="string" />
+      <output id="OutputClause_1gttslk" label="筛选计划状态" typeRef="string" />
+      <output id="OutputClause_1l3pkp0" label="输入框" typeRef="string" />
+      <output id="OutputClause_1jl3ubn" label="查看计划列表" typeRef="string" />
+      <output id="OutputClause_0v1siw1" label="编辑" typeRef="string" />
+      <output id="OutputClause_11fldw1" label="删除" typeRef="string" />
+      <output id="OutputClause_1e7laos" label="转让" typeRef="string" />
+      <output id="OutputClause_088fb8i" label="复制" typeRef="string" />
+      <output id="OutputClause_1pmtw2a" label="行程" typeRef="string" />
+      <output id="OutputClause_0kqxr2u" label="发布" typeRef="string" />
+      <output id="OutputClause_1vwm3id" label="回访" typeRef="string" />
+      <output id="OutputClause_1t7cl04" label="网站连接" typeRef="string" />
+      <rule id="row-620603641-1">
+        <description>筛选站点并不是当前人的站点</description>
+        <inputEntry id="UnaryTests_13s8j7o">        <text>true</text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1ymva93">        <text>false</text>
+</inputEntry>
+        <inputEntry id="UnaryTests_16kvrse">        <text>false</text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0i3w0i6">        <text>-</text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1ee5cn0">        <text>true</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0v5jfsu">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1dfy09e">        <text>仅自己</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_054g6tu">        <text>仅自己部门</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1no3pwk">        <text>所有站点</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1e40443">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0wkagxx">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0l5ns5k">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1szu9oj">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1s84hgi">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_017ivbn">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1hq05db">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0oxfv7k">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_18qt8ds">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_012pl30">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1jc2a4a">        <text>true</text>
+</outputEntry>
+      </rule>
+      <rule id="row-620603641-2">
+        <description></description>
+        <inputEntry id="UnaryTests_05ykufa">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0pfp8g4">        <text>true</text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0x1lers">        <text>false</text>
+</inputEntry>
+        <inputEntry id="UnaryTests_00dtq2x">        <text>-</text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0jdj03b">        <text>-</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1g3ml7h">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_15vrgzg">        <text>所有管辖计调</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0ugr6ry">        <text>仅自己部门</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1uupea2">        <text>所有</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1g02g71">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0l4tlr4">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1pfo2le">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0f67gf8">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0cmj1gj">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1cayewl">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1jxk5y6">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1nslpds">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1jnfyy7">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1idje5z">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1mnt7n8">        <text>true</text>
+</outputEntry>
+      </rule>
+      <rule id="row-620603641-4">
+        <inputEntry id="UnaryTests_1btyfkd">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1qnyul5">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_12d1uwv">        <text>true</text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1k2q3w5">        <text>-</text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0ps2vmy">        <text>-</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1vbofqf">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1gs77v8">        <text>所有计调</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0u5b6dk">        <text>所有管辖部门</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0u6p7lb">        <text>所有</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0up49bu">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1qxvw92">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0vdldfa">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0ff3ffx">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1klpb3m">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0hg3ups">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0tvokaq">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0bwmezz">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0pwq2be">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_08jgez7">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1doo2z3">        <text>true</text>
+</outputEntry>
+      </rule>
+      <rule id="row-620603641-6">
+        <description>筛选部门应该只有几个有计调的部门</description>
+        <inputEntry id="UnaryTests_10nbtrp">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1xequrm">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0ywiuvc">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0egkts2">        <text>true</text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0kyh1bm">        <text>true</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1mr4f1h">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1fe89ik">        <text>仅自己</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1p96l6k">        <text>所有管辖部门</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1a7pxm7">        <text>所有</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1n7lrym">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1ej3qiw">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_03twjcg">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0vqmzi9">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1x7garz">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1nm567d">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0wryex7">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0kpa1dp">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_058uqg7">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0hwessk">        <text>true</text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_08znxfc">        <text>true</text>
+</outputEntry>
+      </rule>
+      <rule id="row-620603641-7">
+        <description>不可看其他人线路</description>
+        <inputEntry id="UnaryTests_11443ch">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0oekcwh">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0gfyyqv">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1a3ey1r">        <text>true</text>
+</inputEntry>
+        <inputEntry id="UnaryTests_00pkku8">        <text>false</text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0uepvst">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0xx6b3y">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0cih9hy">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0zuq7k8">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1wvcsd2">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_10eves0">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0xbkhp3">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1mk0fvx">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0f5n9dp">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_04mkvnj">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0ia94kt">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1ypg9zu">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_01neaov">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_05o0nlw">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_07j1vkx">        <text></text>
+</outputEntry>
+      </rule>
     </decisionTable>
   </decision>
 </definitions>
